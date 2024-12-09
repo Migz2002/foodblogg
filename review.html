@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Reviews</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+         
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+
+            <a href="#" class="logo"><i class= "fas fa-utensils"></i>FoodBlog</a>
+    
+            <nav class="navbar">
+                <a class = "active" href="index.html">Home</a>
+                <a href="blog.html">Blog</a>
+                <a href="review.html">Review</a>
+                <a href="aboutus.html">About</a>
+                <a href="contactus.html">Contact</a>
+            </nav>
+    
+            <div class="icons">
+                <i class="fas fa-bars" id="menu-bars"></i>
+                <i class="fas fa-search" id="search-icon"></i>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-user"></a>
+            </div>
+        </header>
+        <div class="testimonial-section">
+            <h3>Testimonial</h3>
+            <h2>Our Clients Say!!!</h2>
+            <div class="testimonials">
+                <div class="testimonial active">
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p> FoodBlog has completely transformed the way I cook at home! The recipes are so easy to follow, and the flavors remind me of my grandmother's cooking. I especially love how they explain the history behind each dish—it makes every meal feel extra special. Truly a treasure for anyone who loves Filipino food!"</p>
+                    <div class="client-info">
+                        <img alt="Client photo" height="50" src="pics/fem.jpeg" width="50"/>
+                        <div>
+                            <div class="client-name"><h5>Anne Vergara<h5></div>
+                            <div class="client-profession">Chef</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial highlight">
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"I can't thank Sarap Filipino enough for bringing the flavors of home to my kitchen! As an OFW, I miss the taste of traditional Filipino meals. This blog brings authentic recipes straight to my fingertips, and every dish feels like a little piece of the Philippines. I'm so grateful to have found this amazing resource!"</p>
+                    <div class="client-info">
+                        <img alt="Client photo" height="50" src="pics/int.jpeg" width="50"/>
+                        <div>
+                            <div class="client-name"><h5>Marc Ramsay</h5></div>
+                            <div class="client-profession">Profession</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>" I was a bit nervous to start cooking it myself. But after finding this blog, I feel confident and inspired! The step-by-step guides and helpful tips have made all the difference. I’m now a fan of dishes I never thought I’d try, like sinigang and Adobo!"</p>
+                    <div class="client-info">
+                        <img alt="Client photo" height="50" src="pics/chef.jpeg" width="50"/>
+                        <div>
+                            <div class="client-name"><h5>Nick Smith</div></h5>
+                            <div class="client-profession">Chef/vlogger</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+
+        <script>
+            let currentIndex = 0;
+            const testimonials = document.querySelectorAll('.testimonial');
+            const dots = document.querySelectorAll('.dot');
+    
+            function showTestimonial(index) {
+                testimonials.forEach((testimonial, i) => {
+                    testimonial.classList.remove('active');
+                    dots[i].classList.remove('active');
+                    if (i === index) {
+                        testimonial.classList.add('active');
+                        dots[i].classList.add('active');
+                    }
+                });
+            }
+    
+            function nextTestimonial() {
+                currentIndex = (currentIndex + 1) % testimonials.length;
+                showTestimonial(currentIndex);
+            }
+            setInterval(nextTestimonial, 3000); // Change testimonial every 3 seconds
+        </script>    
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start fw-normal mb-4" style="color: #27ae60;">Company</h4>
+                        <a class="btn btn-link" href="">About Us</a>
+                        <a class="btn btn-link" href="">Contact Us</a>
+                        <a class="btn btn-link" href="">Reservation</a>
+                        <a class="btn btn-link" href="">Privacy Policy</a>
+                        <a class="btn btn-link" href="">Terms & Condition</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start fw-normal mb-4" style="color: #27ae60;">Contact</h4>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i> 14-B Sta. Ana Ave, Poblacion District, Davao City, 8000 Davao del Sur</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+63 923 3333 452 </p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>foodblog@gmail.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="section-title ff-secondary text-start fw-normal mb-4" style="color: #27ae60;">Newsletter</h4>
+                        <p>To be updated sign up to our newsletter</p>
+                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                            <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">FoodBlogs</a>, All Right Reserved. 
+							
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							Designed By <a class="border-bottom" href="https://htmlcodex.com">BSIT-2C</a><br><br>
+                            Distributed By <a class="border-bottom" href="https://themewagon.com" target="_blank">Github</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="index.html">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    </body>
+</html>
