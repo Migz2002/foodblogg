@@ -638,27 +638,41 @@ h1 {
 }
 
 @media (max-width: 768px) {
-    html {
-        font-size: 55%;
+    header .icons #menu-bars {
+        display: inline-block;
     }
-    header {
-        padding: 1rem 5%;
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        border-bottom: .1rem solid rgba(0, 0, 0, .2);
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: clip-path 0.3s ease, padding 0.3s ease;
     }
+
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
     header .navbar a {
-        font-size: 1.3rem;
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: #eee;
     }
-    .home .home-slider .slide {
-        flex-direction: column;
-        padding-top: 6rem;
+
+    #search-form #search-box{
+        width: 90%;
+        margin:0 1rem;
     }
-    .home .home-slider .slide .content h3 {
-        font-size: 3.5rem;
-    }
-    .home .home-slider .slide .content p {
-        font-size: 1.5rem;
-    }
-    .dishes .box-container {
-        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    .home .home-slider .slide .content h3{
+        font-size: 5rem;
     }
 }
 
